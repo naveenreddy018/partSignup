@@ -1,0 +1,12 @@
+.scrolling-languages {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    padding: 0.5rem;
+    gap: 1rem;
+    scrollbar-width: none;
+}
+
+.scrolling-languages::-webkit-scrollbar {
+    display: none;
+}

@@ -9,9 +9,7 @@ const features = [
       { icon: '💳', title: 'Payment Aggregator', desc: 'Accepting payments made easy for businesses' },
       { icon: '🌐', title: 'Payment Gateway', desc: 'Payments on your Website & App' },
       { icon: '🔗', title: 'Payment Links', desc: 'Create & send links to collect money' },
-      // { icon: '📄', title: 'Payment Pages', desc: 'Get paid with personalized page' },
-      // { icon: '🛒', title: 'Webstore', desc: 'List, sell, get paid in minutes' },
-      // { icon: '📷', title: 'QR Codes', desc: 'Multi-feature QR for your business' },
+
     ],
   },
   {
@@ -20,9 +18,7 @@ const features = [
       { icon: '⚡', title: 'Instant Settlement', desc: 'Customer payments settled faster' },
       { icon: '🛍️', title: 'Magic Checkout', desc: 'Improve Order Conversions & Reduce RTOs', isNew: true },
       { icon: '🤖', title: 'Smart Collect 2.0', desc: 'Automate NEFT, RTGS, IMPS payments' },
-      // { icon: '🔁', title: 'Subscriptions', desc: 'Collect recurring subscription payments' },
-      // { icon: '🌎', title: 'International Payments', desc: 'Accept payments from across the globe' },
-      // { icon: '🧩', title: 'Embedded Payments', desc: 'End-to-end payments stack for Platforms' },
+    
     ],
   },
   {

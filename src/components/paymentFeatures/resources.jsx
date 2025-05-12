@@ -204,13 +204,14 @@ const Resources = () => {
               <div className="d-flex align-items-center gap-2">
                 <a 
                   href="#" 
+                  
                   style={hovered === 'roiCalculator' ? { ...linkStyle, ...linkHoveredStyle } : linkStyle}
                   onMouseEnter={() => setHovered('roiCalculator')}
                   onMouseLeave={() => setHovered(null)}
                 >
                   ROI Calculator
                 </a>
-                <Badge bg="success" className="px-1 py-0" style={{ fontSize: '10px' }}>NEW</Badge>
+                <Badge bg="success" className="px-2 py-1"  style={{ fontSize: '10px' }}>NEW</Badge>
               </div>
             </Col>
           </Row>
@@ -257,7 +258,7 @@ const Resources = () => {
                 >
                   CAGR Calculator
                 </a>
-                <Badge bg="success" className="px-1 py-0" style={{ fontSize: '10px' }}>NEW</Badge>
+                <Badge bg="success" className="px-2 py-1"  style={{ fontSize: '10px' }}>NEW</Badge>
               </div>
             </Col>
           </Row>
@@ -277,7 +278,7 @@ const Resources = () => {
                 >
                   EBITDA Calculator
                 </a>
-                <Badge bg="success" className="px-1 py-0" style={{ fontSize: '10px' }}>NEW</Badge>
+                <Badge bg="success" className="px-2 py-1" style={{ fontSize: '10px' }}>NEW</Badge>
               </div>
             </Col>
           </Row>

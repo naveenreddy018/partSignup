@@ -53,15 +53,16 @@ const Header = () => {
       }}
     >
       <Container
-        fluid="md"
-        style={{
-          background: 'linear-gradient(to right, #eaf6f3, #fbf9f6)',
-          borderRadius: '999px',
-          boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-          padding: '20px 20px',
-          marginTop: '30px',
-        }}
-      >
+  fluid="md"
+  style={{
+    background: 'linear-gradient(to right, #eaf6f3, #fbf9f6)',
+    borderRadius: window.innerWidth < 992 ? '30px' : '999px',
+    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+    padding: '20px 20px',
+    marginTop: '30px',
+  }}
+>
+
         <Navbar expand="lg" variant="light" className="p-0">
           <Navbar.Brand
             href="#"
@@ -92,13 +93,16 @@ const Header = () => {
             <Nav className="mx-auto gap-3 text-center flex-column flex-lg-row">
               <Nav.Link
                 href="#"
-                className="rounded-pill px-4 fw-bold text-white nav-link-hover"
+                className="rounded-pill px-3 fw-bold text-white"
                 onMouseEnter={() => isLargeScreen && setShowResources(true)}
                 onMouseLeave={() => isLargeScreen && setShowResources(false)}
                 style={{
                   backgroundColor: 'rgb(48, 94, 255)',
                   position: 'relative',
                   transition: 'background-color 0.3s ease',
+                  textAlign: "center",
+
+                    marginTop : window.innerWidth < 992 ? "30px" : "0px"
                 }}
               >
                 Resources
@@ -107,7 +111,7 @@ const Header = () => {
                     style={{
                       position: 'absolute',
                       top: '100%',
-                      left: 0,
+                      left:"-200px",
                       width: '1000px',
                       background: 'white',
                       zIndex: 1000,
@@ -124,8 +128,8 @@ const Header = () => {
                 )}
               </Nav.Link>
 
-              <Nav.Link href="#" className="fw-medium text-dark nav-link-hover">
-                Products
+              <Nav.Link href="/docs" className="fw-medium text-dark nav-link-hover">
+                Docs
               </Nav.Link>
 
               <Nav.Link
@@ -158,10 +162,10 @@ const Header = () => {
                 )}
               </Nav.Link>
 
-              <Nav.Link href="#" className="fw-medium text-dark nav-link-hover">
+              {/* <Nav.Link href="#" className="fw-medium text-dark nav-link-hover">
                 Docs
-              </Nav.Link>
-              <Nav.Link href="#" className="fw-medium text-dark nav-link-hover">
+              </Nav.Link> */}
+              <Nav.Link href="/pricing" className="fw-medium text-dark nav-link-hover">
                 Pricing
               </Nav.Link>
 
@@ -176,13 +180,13 @@ const Header = () => {
               </NavDropdown>
 
               <Nav.Link
-                href="#"
+                href="/about"
                 className="fw-medium text-dark position-relative nav-link-hover"
                 onMouseEnter={() => isLargeScreen && setShowAbout(true)}
                 onMouseLeave={() => isLargeScreen && setShowAbout(false)}
               >
                 About us
-                {showAbout && isLargeScreen && (
+                {/* {showAbout && isLargeScreen && (
                   <div
                     style={{
                       position: 'absolute',
@@ -201,7 +205,7 @@ const Header = () => {
                   >
                     <AboutJaisvik />
                   </div>
-                )}
+                )} */}
               </Nav.Link>
             </Nav>
 

@@ -11,6 +11,14 @@ import visaIcon from "./visa.webp"
 import masterIcon from "./masterCard.webp"
 import indianBankIcon from "./indian_Bank.png"
 import indian_Overseas_BankIcon from "./Indian_Overseas_Bank.jpeg"
+import mobiwik from "./Mobikwik.png"
+import freecharge from "./freecharge.png"
+import paypal from "./paypal.png"
+import jiomoney from "./jiomoney.jpeg"
+import payzappIcon from "./payzapp.png"
+import airtelmoney from "./airtelmoney.png"
+import humanIcon from "./human.jpeg"
+import cardSecurity from "./card-security.svg"
 
 
 const assets = {
@@ -26,12 +34,16 @@ const assets = {
     hdfcIcon,
     unionIcon,
     AxisIcon,
-    indianBankIcon ,
-     indian_Overseas_BankIcon
-
-
-
-
+    indianBankIcon,
+    indian_Overseas_BankIcon,
+    mobiwik,
+    freecharge,
+    jiomoney,
+    paypal,
+    payzappIcon,
+    airtelmoney,
+    humanIcon,
+    cardSecurity
 }
 
 export default assets

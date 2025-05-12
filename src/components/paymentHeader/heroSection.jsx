@@ -2,7 +2,7 @@ import React from 'react'
 import assets from '../../assets/assests'
 
 function Herosection() {
-    
+
   const featuresList = [
     {
       icon: assets.upi_id,
@@ -30,7 +30,7 @@ function Herosection() {
   ];
   return (
     <div>
-    
+
       {/* Quick Actions */}
       <div
         style={{
@@ -84,54 +84,6 @@ function Herosection() {
             </div>
           ))}
         </div>
-      </div>
-
-         <div style={{ maxWidth: "1140px", margin: "40px auto", textAlign: "center" }}>
-        <h4 style={{ fontWeight: "bold" }}>Trusted by 10,000+ Businesses</h4>
-        <p style={{ color: "#6c757d" }}>Startups, Enterprises, MSMEs trust Jaisvik Pay</p>
-        <img
-          src="https://razorpay.com/build/browser/static/brands.20ef423c.png"
-          alt="Trusted Brands"
-          style={{ maxWidth: "100%", height: "auto" }}
-        />
-      </div>
-
-      {/* Footer */}
-      <div style={{ background: "#222", color: "#fff", padding: "40px 16px" }}>
-        <div
-          style={{
-            maxWidth: "1140px",
-            margin: "0 auto",
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "40px",
-          }}
-        >
-          <div style={{ flex: "1 1 50%" }}>
-            <h5>JAISVIK SOFTWARE</h5>
-            <p>Revolutionizing payments for modern businesses.</p>
-          </div>
-          <div>
-            <h6>Company</h6>
-            <ul style={{ listStyle: "none", padding: 0 }}>
-              <li><a href="#" style={{ color: "#fff" }}>About Us</a></li>
-              <li><a href="#" style={{ color: "#fff" }}>Careers</a></li>
-              <li><a href="#" style={{ color: "#fff" }}>Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h6>Solutions</h6>
-            <ul style={{ listStyle: "none", padding: 0 }}>
-              <li><a href="#" style={{ color: "#fff" }}>Payment Gateway</a></li>
-              <li><a href="#" style={{ color: "#fff" }}>Payouts</a></li>
-              <li><a href="#" style={{ color: "#fff" }}>Payroll</a></li>
-            </ul>
-          </div>
-        </div>
-        <hr style={{ borderColor: "#555" }} />
-        <p style={{ textAlign: "center", marginTop: "16px" }}>
-          © 2025 Jaisvik Software Pvt Ltd. All rights reserved.
-        </p>
       </div>
 
 

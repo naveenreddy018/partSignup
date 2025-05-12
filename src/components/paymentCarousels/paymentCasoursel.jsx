@@ -15,7 +15,7 @@ const slides = [
     title: "Grow Your Business Fast",
     subtitle: "with Secure Payments",
     description: "Fast Checkout | Fraud Protection | Global Support",
-    image: assets.jaisvikAccepts,
+    image: assets.upi_id,
     button1: "Get Started",
     button2: "Explore",
   },
@@ -23,7 +23,7 @@ const slides = [
     title: "Smart Payment Gateway",
     subtitle: "for Modern Businesses",
     description: "Easy Setup | Customizable | Scalable APIs",
-    image: assets.jaisvikAccepts,
+    image: assets.cardspayments,
     button1: "Try Free",
     button2: "Learn More",
   }
@@ -34,7 +34,7 @@ const HeroCarousel = () => {
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
 
-  // Auto-rotate
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
@@ -45,7 +45,6 @@ const HeroCarousel = () => {
   const handlePrev = () => setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   const handleNext = () => setCurrent((prev) => (prev + 1) % slides.length);
 
-  // Swipe functionality for mobile
   const handleTouchStart = (e) => {
     touchStartX.current = e.changedTouches[0].screenX;
   };
@@ -64,29 +63,33 @@ const HeroCarousel = () => {
 
   const carouselStyle = {
     transition: 'transform 1s ease-in-out',
-    width: '85%', // Set the width to 75% of the screen
-    margin: '100px auto 0', // Center it and add top margin
+    width: '85%',
+    margin: 'auto',
     display: 'flex',
-    height : "70vh",
+    height: "70vh",
     justifyContent: 'center',
     flexDirection: 'column',
     position: 'relative',
     overflow: 'hidden',
-    backgroundColor: '#f8f9fa',
+      backgroundColor: "#e0f7ff",
+    // backgroundColor: '#f8f9fa',
     borderRadius: '10px',
-    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+    // boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
     padding: '40px 20px',
-    zIndex: 10,
+    zIndex: 100,
+    marginTop : window.innerWidth < 992 ? "180px" :  "150px"
+  
   };
 
   const controlButtonStyle = {
     borderRadius: '50%',
     padding: '15px 20px',
-    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    // backgroundColor: 'rgba(255, 255, 255, 0.8)',
     border: 'none',
     color: '#333',
     fontSize: '24px',
     transition: 'background-color 0.3s ease',
+     backgroundColor: "#e0f7ff",
   };
 
   return (
@@ -97,7 +100,7 @@ const HeroCarousel = () => {
       onTouchEnd={handleTouchEnd}
     >
       <Container fluid>
-        <Row className="align-items-center justify-content-center">
+        <Row className="align-items-center p-5 justify-content-center">
           <Col md={6} className="text-center text-md-start mb-4 mb-md-0">
             <h1 className="text-primary fw-bold display-4">{slide.title}</h1>
             <h3 className="fw-semibold">{slide.subtitle}</h3>
@@ -108,12 +111,11 @@ const HeroCarousel = () => {
             </div>
           </Col>
           <Col md={6} className="text-center">
-            <Image src={slide.image} fluid style={{ maxHeight: '400px', objectFit: 'cover' }} />
+            <Image src={slide.image} fluid style={{ maxHeight: '500px', objectFit: 'cover' }} />
           </Col>
         </Row>
       </Container>
 
-      {/* Controls */}
       <Button
         variant="light"
         onClick={handlePrev}
