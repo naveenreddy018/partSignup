@@ -14,33 +14,33 @@ export default function Footer() {
                     }}
                 >
                     <div style={{ flex: "1 1 30%" }}>
-                        <h5>JAISVIK SOFTWARE</h5>
+                        <h5>JAISVIK SOFTWARE SOLUTIONS</h5>
                         <p>Revolutionizing payments for modern businesses.</p>
                     </div>
 
                     <div style={{ flex: "1 1 20%" }}>
                         <h6>Company</h6>
                         <ul style={{ listStyle: "none", padding: 0 }}>
-                            <li><a href="#" style={{ color: "#fff" }}>About</a></li>
-                            <li><a href="#" style={{ color: "#fff" }}>Careers</a></li>
-                            <li><a href="#" style={{ color: "#fff" }}>Contact</a></li>
+                            <li><a href="#" style={{ color: "#fff", textDecoration: "none" }}>About</a></li>
+                            <li><a href="#" style={{ color: "#fff", textDecoration: "none" }}>Careers</a></li>
+                            <li><a href="#" style={{ color: "#fff", textDecoration: "none" }}>Contact</a></li>
                         </ul>
                     </div>
 
                     <div style={{ flex: "1 1 20%" }}>
                         <h6>Solutions</h6>
                         <ul style={{ listStyle: "none", padding: 0 }}>
-                            <li><a href="#" style={{ color: "#fff" }}>Payment Gateway</a></li>
-                            <li><a href="#" style={{ color: "#fff" }}>Payouts</a></li>
-                            <li><a href="#" style={{ color: "#fff" }}>Payroll</a></li>
+                            <li><a href="#" style={{ color: "#fff", textDecoration: "none" }}>Payment Gateway</a></li>
+                            <li><a href="#" style={{ color: "#fff", textDecoration: "none" }}>Payouts</a></li>
+                            <li><a href="#" style={{ color: "#fff", textDecoration: "none" }}>Payroll</a></li>
                         </ul>
                     </div>
 
                     <div style={{ flex: "1 1 20%" }}>
                         <h6>Follow Us</h6>
                         <ul style={{ listStyle: "none", padding: 0 }}>
-                            <li><a href="#" style={{ color: "#fff" }}>Facebook</a></li>
-                            <li><a href="#" style={{ color: "#fff" }}>Twitter</a></li>
+                            <li><a href="#" style={{ color: "#fff", textDecoration: "none" }}>Facebook</a></li>
+                            <li><a href="#" style={{ color: "#fff", textDecoration: "none" }}>Twitter</a></li>
                         </ul>
                     </div>
 

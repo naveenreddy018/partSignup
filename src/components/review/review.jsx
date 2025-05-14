@@ -90,7 +90,7 @@ const TestimonialScroll = () => {
         };
 
 
-        const intervalId = setInterval(scroll, 30);
+        const intervalId = setInterval(scroll, 10);
 
 
         return () => clearInterval(intervalId);
@@ -111,7 +111,7 @@ const TestimonialScroll = () => {
                         key={i}
                         style={{
                             ...testimonialCardStyle,
-                            marginRight: '1rem',
+                            marginRight: '1.5rem',
                         }}
                     >
                         <Card.Body>
@@ -119,15 +119,16 @@ const TestimonialScroll = () => {
                                 style={{
                                     display: 'flex',
                                     alignItems: 'center',
-                                    marginBottom: '10px',
+                                     gap : "10px",
+                                    marginBottom: '0px',
                                 }}
                             >
                                 <Image
                                     src={t.image}
                                     roundedCircle
-                                    width={40}
-                                    height={40}
-                                    style={{ marginRight: '10px' }}
+                                    width={50}
+                                    height={50}
+                                    style={{ marginRight: '0px',border : "1px solid black" , objectFit : "cover" }}
                                 />
                                 <div>
                                     <strong>{t.name}</strong>

@@ -31,16 +31,16 @@ const Resources = () => {
             <Col md={3}>
               <h6 className="text-secondary" style={{ fontSize: '14px', fontWeight: '500' }}>SOLUTIONS</h6>
             </Col>
-            <Col md={3}>
+            {/* <Col md={3}>
               <h6 className="text-secondary" style={{ fontSize: '14px', fontWeight: '500' }}>FREE TOOLS</h6>
-            </Col>
+            </Col> */}
           </Row>
-          
+
           {/* Row 1 */}
           <Row className="mb-3">
             <Col md={3}>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 style={hovered === 'blog' ? { ...linkStyle, ...linkHoveredStyle } : linkStyle}
                 onMouseEnter={() => setHovered('blog')}
                 onMouseLeave={() => setHovered(null)}
@@ -49,8 +49,8 @@ const Resources = () => {
               </a>
             </Col>
             <Col md={3}>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 style={hovered === 'developerDocs' ? { ...linkStyle, ...linkHoveredStyle } : linkStyle}
                 onMouseEnter={() => setHovered('developerDocs')}
                 onMouseLeave={() => setHovered(null)}
@@ -59,8 +59,8 @@ const Resources = () => {
               </a>
             </Col>
             <Col md={3}>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 style={hovered === 'saas' ? { ...linkStyle, ...linkHoveredStyle } : linkStyle}
                 onMouseEnter={() => setHovered('saas')}
                 onMouseLeave={() => setHovered(null)}
@@ -68,7 +68,7 @@ const Resources = () => {
                 SaaS
               </a>
             </Col>
-            <Col md={3}>
+            {/* <Col md={3}>
               <a 
                 href="#" 
                 style={hovered === 'gstCalculator' ? { ...linkStyle, ...linkHoveredStyle } : linkStyle}
@@ -77,14 +77,14 @@ const Resources = () => {
               >
                 GST Calculator
               </a>
-            </Col>
+            </Col> */}
           </Row>
 
           {/* Row 2 */}
           <Row className="mb-3">
             <Col md={3}>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 style={hovered === 'learn' ? { ...linkStyle, ...linkHoveredStyle } : linkStyle}
                 onMouseEnter={() => setHovered('learn')}
                 onMouseLeave={() => setHovered(null)}
@@ -93,8 +93,8 @@ const Resources = () => {
               </a>
             </Col>
             <Col md={3}>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 style={hovered === 'integrations' ? { ...linkStyle, ...linkHoveredStyle } : linkStyle}
                 onMouseEnter={() => setHovered('integrations')}
                 onMouseLeave={() => setHovered(null)}
@@ -103,8 +103,8 @@ const Resources = () => {
               </a>
             </Col>
             <Col md={3}>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 style={hovered === 'eCommerce' ? { ...linkStyle, ...linkHoveredStyle } : linkStyle}
                 onMouseEnter={() => setHovered('eCommerce')}
                 onMouseLeave={() => setHovered(null)}
@@ -112,7 +112,7 @@ const Resources = () => {
                 E-commerce
               </a>
             </Col>
-            <Col md={3}>
+            {/* <Col md={3}>
               <a 
                 href="#" 
                 style={hovered === 'gstSearch' ? { ...linkStyle, ...linkHoveredStyle } : linkStyle}
@@ -121,14 +121,14 @@ const Resources = () => {
               >
                 GST Number Search
               </a>
-            </Col>
+            </Col> */}
           </Row>
 
           {/* Row 3 */}
           <Row className="mb-3">
             <Col md={3}>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 style={hovered === 'events' ? { ...linkStyle, ...linkHoveredStyle } : linkStyle}
                 onMouseEnter={() => setHovered('events')}
                 onMouseLeave={() => setHovered(null)}
@@ -137,8 +137,8 @@ const Resources = () => {
               </a>
             </Col>
             <Col md={3}>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 style={hovered === 'apiReference' ? { ...linkStyle, ...linkHoveredStyle } : linkStyle}
                 onMouseEnter={() => setHovered('apiReference')}
                 onMouseLeave={() => setHovered(null)}
@@ -147,8 +147,8 @@ const Resources = () => {
               </a>
             </Col>
             <Col md={3}>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 style={hovered === 'education' ? { ...linkStyle, ...linkHoveredStyle } : linkStyle}
                 onMouseEnter={() => setHovered('education')}
                 onMouseLeave={() => setHovered(null)}
@@ -156,7 +156,7 @@ const Resources = () => {
                 Education
               </a>
             </Col>
-            <Col md={3}>
+            {/* <Col md={3}>
               <a 
                 href="#" 
                 style={hovered === 'gstSearchByPan' ? { ...linkStyle, ...linkHoveredStyle } : linkStyle}
@@ -165,14 +165,14 @@ const Resources = () => {
               >
                 GST Search by PAN
               </a>
-            </Col>
+            </Col> */}
           </Row>
 
           {/* Row 4 */}
           <Row className="mb-3">
             <Col md={3}>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 style={hovered === 'whitePapers' ? { ...linkStyle, ...linkHoveredStyle } : linkStyle}
                 onMouseEnter={() => setHovered('whitePapers')}
                 onMouseLeave={() => setHovered(null)}
@@ -181,8 +181,8 @@ const Resources = () => {
               </a>
             </Col>
             <Col md={3}>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 style={hovered === 'apiPlayground' ? { ...linkStyle, ...linkHoveredStyle } : linkStyle}
                 onMouseEnter={() => setHovered('apiPlayground')}
                 onMouseLeave={() => setHovered(null)}
@@ -191,8 +191,8 @@ const Resources = () => {
               </a>
             </Col>
             <Col md={3}>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 style={hovered === 'bfsi' ? { ...linkStyle, ...linkHoveredStyle } : linkStyle}
                 onMouseEnter={() => setHovered('bfsi')}
                 onMouseLeave={() => setHovered(null)}
@@ -200,7 +200,7 @@ const Resources = () => {
                 BFSI
               </a>
             </Col>
-            <Col md={3}>
+            {/* <Col md={3}>
               <div className="d-flex align-items-center gap-2">
                 <a 
                   href="#" 
@@ -213,14 +213,14 @@ const Resources = () => {
                 </a>
                 <Badge bg="success" className="px-2 py-1"  style={{ fontSize: '10px' }}>NEW</Badge>
               </div>
-            </Col>
+            </Col> */}
           </Row>
 
           {/* Row 5 */}
           <Row className="mb-3">
             <Col md={3}>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 style={hovered === 'customerStories' ? { ...linkStyle, ...linkHoveredStyle } : linkStyle}
                 onMouseEnter={() => setHovered('customerStories')}
                 onMouseLeave={() => setHovered(null)}
@@ -229,8 +229,8 @@ const Resources = () => {
               </a>
             </Col>
             <Col md={3}>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 style={hovered === 'onboardingApis' ? { ...linkStyle, ...linkHoveredStyle } : linkStyle}
                 onMouseEnter={() => setHovered('onboardingApis')}
                 onMouseLeave={() => setHovered(null)}
@@ -239,8 +239,8 @@ const Resources = () => {
               </a>
             </Col>
             <Col md={3}>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 style={hovered === 'freelance' ? { ...linkStyle, ...linkHoveredStyle } : linkStyle}
                 onMouseEnter={() => setHovered('freelance')}
                 onMouseLeave={() => setHovered(null)}
@@ -248,7 +248,7 @@ const Resources = () => {
                 Freelance
               </a>
             </Col>
-            <Col md={3}>
+            {/* <Col md={3}>
               <div className="d-flex align-items-center gap-2">
                 <a 
                   href="#" 
@@ -260,11 +260,11 @@ const Resources = () => {
                 </a>
                 <Badge bg="success" className="px-2 py-1"  style={{ fontSize: '10px' }}>NEW</Badge>
               </div>
-            </Col>
+            </Col> */}
           </Row>
 
           {/* Row 6 (only for the last column) */}
-          <Row>
+          {/* <Row>
             <Col md={3}></Col>
             <Col md={3}></Col>
             <Col md={3}></Col>
@@ -281,7 +281,7 @@ const Resources = () => {
                 <Badge bg="success" className="px-2 py-1" style={{ fontSize: '10px' }}>NEW</Badge>
               </div>
             </Col>
-          </Row>
+          </Row> */}
         </Card.Body>
       </Card>
     </Container>

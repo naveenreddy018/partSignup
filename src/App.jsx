@@ -1,22 +1,22 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import "./App.css"
 
-import Header from './components/paymentHeader/paymentHeader'
-import PaymentCarousel from './components/paymentCarousels/paymentCasoursel'
-import BankScroll from './components/paymentHeader/scroll'
-import Herosection from './components/paymentHeader/heroSection'
-
-import ApiCodeIntegration from './components/paymentHeader/ApiCodeSection'
-import Footer from './components/paymentFooter/paymentFooter'
-import PricingPage from './components/pricing/pricing'
-import TestimonialCarousel from './components/paymentHeader/review'
-import JasivikAPIIntegrationDoc from './components/paymentDocument/docsPage'
-import AboutPage from './components/paymentFeatures/About'
+import PaymentCarousel from './components/Carousel/paymentCasoursel'
+import BankScroll from './components/bankIconsroll/scroll'
+import Herosection from './components/heroSection/heroSection'
+import Header from './components/Header/paymentHeader'
+import ApiCodeIntegration from './components/apiIntergrationCode/ApiCodeSection'
+import Footer from './components/Footer/paymentFooter'
+import PricingPage from './components/pricing/mainPricingSection'
+import TestimonialCarousel from './components/review/review'
+import JasivikAPIIntegrationDoc from './components//navBar/documentPage/docsPage'
+import AboutPage from './components/navBar/about/About'
 
 function App() {
   return (
     <Router>
-      <Header />
+      <Header/>
       <Routes>
         <Route
           path="/"

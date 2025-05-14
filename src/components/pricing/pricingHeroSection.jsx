@@ -2,96 +2,99 @@ import React from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { BsInfoCircle, BsHeadset } from 'react-icons/bs';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import assets from '../../assets/assests';
 
 const PaymentGatewayPromoSmall = () => {
   const handleSignUp = () => alert('Redirecting to Sign Up...');
   const handleSales = () => alert('Contacting Sales...');
 
   return (
-    <Container fluid className="py-5 " style={{ width: '80%', marginTop : "100px", background: 'linear-gradient(to right, #f8f9fa, #e9f0f7)' }}>
-      <Row className="justify-content-center align-items-center">
-        <Col md={6}>
-          <h4 className="fw-bold text-dark mb-1">
-            Start accepting <span className="text-primary">payments</span>
-          </h4>
-          <h5 className="fw-bold text-dark">at just</h5>
-
-          <div className="d-flex align-items-start mb-2">
-            <span style={{ fontSize: '4rem', fontWeight: 'bold', color: '#0F2744' }}>2%</span>
-            <div className="ms-2 small">
-              <p className="mb-1">on all transactions</p>
-              <p className="mb-0 fw-semibold">(Platform fees)*</p>
-              <BsInfoCircle className="text-secondary mt-1" />
+    <section style={{ padding: '200px 0 30px 0' }}>
+      <Container>
+        <Row className="justify-content-center">
+          {/* Main Content */}
+          <Col xs={12} md={6} className="text-center mb-4 mb-md-0">
+            <div>
+              <h5 className="fw-bold text-dark">Accept Payments Easily</h5>
+              <p className="text-muted small">Fast and affordable payment solutions.</p>
             </div>
-          </div>
 
-          <p className="text-secondary small mb-3">*18% GST applicable</p>
-          <div className="d-flex mb-3 small">
-            <span>₹0 Setup</span><span className="mx-2">•</span><span>₹0 Maintenance</span>
-          </div>
+            <div className="text-center mb-3">
+              <h6 className="fw-semibold text-primary">Transaction Fee: </h6>
+              <div className="d-flex justify-content-center align-items-baseline mt-1">
+                <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#1e293b' }}>1.5%</span>
+                <div className="ms-2">
+                  <p className="mb-0 small">Platform Charges</p>
+                  <BsInfoCircle className="text-muted mt-1" />
+                </div>
+              </div>
+            </div>
 
-          <Button
-            variant="primary"
-            size="sm"
-            className="fw-semibold mb-3"
-            onClick={handleSignUp}
-            style={{
-              width: '60%',
-              background: 'linear-gradient(to right, #3b82f6, #2563eb)',
-              border: 'none',
-            }}
-          >
-            Sign Up →
-          </Button>
+            {/* Call to Action Buttons */}
+            <Row className="mb-3">
+              <Col xs={12} sm={6}>
+                <Button
+                  variant="primary"
+                  size="sm"
+                  onClick={handleSignUp}
+                  className="w-100 py-1 fw-semibold"
+                  style={{
+                    border: 'none',
+                  }}
+                >
+                  Get Started
+                </Button>
+              </Col>
+              <Col xs={12} sm={6} className="mt-3 mt-sm-0">
+                <Button
+                  variant="outline-primary"
+                  size="sm"
+                  onClick={handleSales}
+                  className="w-100 py-1 fw-semibold"
+                  style={{
+                    border: '2px solid #0077b6',
+                  }}
+                >
+                  <BsHeadset className="me-1" /> Talk to Sales
+                </Button>
+              </Col>
+            </Row>
 
-          <Card className="border-0 shadow-sm bg-light">
-            <Card.Body className="d-flex justify-content-between align-items-center p-2">
-              <span className="small">Revenue above ₹5Lakh?</span>
-              <Button variant="outline-primary" size="sm" onClick={handleSales}>
-                <BsHeadset className="me-1" /> Sales
-              </Button>
-            </Card.Body>
-          </Card>
-        </Col>
+            {/* Info Card (commented out as it is empty) */}
+            <Card className="shadow-sm border-0 rounded-2 bg-white">
+              <Card.Body className="text-center p-2"></Card.Body>
+            </Card>
+          </Col>
 
-        <Col md={6} className="text-center mt-4 mt-md-0">
-          <div
-            className="rounded shadow"
-            style={{
-              width: '260px',
-              height: '420px',
-              backgroundColor: '#4285F4',
-              borderRadius: '25px',
-              margin: 'auto',
-              position: 'relative',
-            }}
-          >
+          {/* Right-Side Image Section */}
+          <Col xs={12} md={6} className="d-flex justify-content-center mt-3 mt-md-0">
             <div
-              className="bg-white position-absolute"
+              className="payment-graphic"
               style={{
-                top: '40px',
-                left: '15px',
-                right: '15px',
-                bottom: '15px',
-                borderRadius: '15px',
-                padding: '10px',
+                background: 'url(https://via.placeholder.com/250) no-repeat center center',
+                backgroundSize: 'cover',
+                borderRadius: '6px',
+                width: '100%',
+                height: '200px',
+                // boxShadow: '0 3px 8px rgba(0,0,0,0.1)',
               }}
             >
-              <h6 className="text-center small mb-2">Payment Gateway</h6>
-              <div className="small mb-2">PREFERRED METHODS</div>
-              <div className="d-flex gap-1 mb-2">
-                <div className="border rounded bg-white p-1 text-center small" style={{ width: '50px' }}>VISA</div>
-                <div className="border rounded bg-white p-1" style={{ width: '50px' }}></div>
-                <div className="border rounded bg-white p-1" style={{ width: '50px' }}></div>
-              </div>
-              <div className="bg-primary text-white text-center py-1 rounded small position-absolute bottom-2 start-0 end-0 mx-2">
-                PAY ₹300
-              </div>
+              <img
+                src={assets.contact}
+                alt="contact sales"
+                style={{
+                  maxWidth: '100%',
+                  height: '400px',
+                  objectFit: 'contain',
+                  paddingLeft: "100px",
+                  marginBottom: "100px"
+                }}
+              />
             </div>
-          </div>
-        </Col>
-      </Row>
-    </Container>
+          </Col>
+        </Row>
+      </Container>
+    </section>
   );
 };
 

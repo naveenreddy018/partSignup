@@ -9,11 +9,12 @@ import {
 import { FaUser, FaShoppingCart, FaTimes } from 'react-icons/fa';
 import { BsBag } from 'react-icons/bs';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Payment from '../paymentFeatures/Payment';
-import PayrollMenu from '../paymentFeatures/payRoll';
-import AboutJaisvik from '../paymentFeatures/About';
-import Resources from '../paymentFeatures/resources';
+import Payment from '../navBar/payment/Payment';
+// import PayrollMenu from '../paymentFeatures/payRoll';
+// import AboutJaisvik from '../paymentFeatures/About';
+import Resources from '../navBar/resources/resources';
 import "./paymentHeader.css";
+import assets from '../../assets/assests';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -53,15 +54,18 @@ const Header = () => {
       }}
     >
       <Container
-  fluid="md"
-  style={{
-    background: 'linear-gradient(to right, #eaf6f3, #fbf9f6)',
-    borderRadius: window.innerWidth < 992 ? '30px' : '999px',
-    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-    padding: '20px 20px',
-    marginTop: '30px',
-  }}
->
+        fluid="md"
+        style={{
+          background: 'linear-gradient(to right, #eaf6f3, #fbf9f6)',
+          borderRadius: window.innerWidth < 992 ? '30px' : '999px',
+          boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+          padding: '20px 20px',
+          marginTop: '30px',
+        }}
+      >
+
+
+
 
         <Navbar expand="lg" variant="light" className="p-0">
           <Navbar.Brand
@@ -69,7 +73,8 @@ const Header = () => {
             className="fw-bold d-flex align-items-center"
             style={{ gap: '8px' }}
           >
-            <BsBag />
+            < img src={assets.jaisvik} width="0px" />
+
             <span>JAISVIK PAY</span>
           </Navbar.Brand>
 
@@ -86,11 +91,16 @@ const Header = () => {
             {menuOpen ? <FaTimes /> : '☰'}
           </Navbar.Toggle>
 
+
           <Navbar.Collapse
             id="main-navbar-nav"
             className={`justify-content-between ${menuOpen ? 'd-block' : 'd-none'} d-lg-flex`}
           >
+
             <Nav className="mx-auto gap-3 text-center flex-column flex-lg-row">
+              <Nav.Link href="/" className="fw-medium text-dark nav-link-hover">
+                Home
+              </Nav.Link>
               <Nav.Link
                 href="#"
                 className="rounded-pill px-3 fw-bold text-white"
@@ -102,7 +112,7 @@ const Header = () => {
                   transition: 'background-color 0.3s ease',
                   textAlign: "center",
 
-                    marginTop : window.innerWidth < 992 ? "30px" : "0px"
+                  marginTop: window.innerWidth < 992 ? "30px" : "0px"
                 }}
               >
                 Resources
@@ -111,7 +121,7 @@ const Header = () => {
                     style={{
                       position: 'absolute',
                       top: '100%',
-                      left:"-200px",
+                      left: "-200px",
                       width: '1000px',
                       background: 'white',
                       zIndex: 1000,
@@ -146,7 +156,7 @@ const Header = () => {
                       position: 'absolute',
                       top: '100%',
                       width: '1000px',
-                      left: '-300px',
+                      left: '-420px',
                       background: 'white',
                       zIndex: 1000,
                       padding: '10px',

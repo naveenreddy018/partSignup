@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Button, Card, Dropdown } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./ApiCodeSection.css"
+import "./ApiCodeSection.css";
 
 const ApiCodeIntegration = () => {
     const [language, setLanguage] = useState("Curl");
@@ -59,67 +59,68 @@ orderRequest.put("first_payment_min_amount", 230);
 
 Order order = JAISVIKPAY.Orders.create(orderRequest);`
     };
-
+    // style={{ backgroundColor: "rgba(0, 32, 96, 0.9)" }}
     return (
-        <div style={{ backgroundColor: "#002d3c", color: "white", minHeight: "100vh", marginTop: "150px" }}>
+        <div style={{ backgroundColor: "rgba(0, 32, 96, 0.9)", color: "#002d3c", minHeight: "100vh", marginTop: "100px" }}>
 
-            <div style={{ backgroundColor: "#00b386", padding: "0.5rem", fontWeight: "bold" }}>
-                <div style={{ backgroundColor: "#00b386", padding: "0.5rem", fontWeight: "bold" }}>
-                    <div className="scrolling-languages text-dark d-flex justify-content-center  align-items-center">
-                        {["JAVA", "PYTHON", "PHP", "NODE JS"].map((lang, idx) =>
-                            [...Array(1)].map((_, i) => (
-                                <span key={`${lang}-${i}`} className="me-3">{lang} </span>
-                            ))
-                        )}
-                    </div>
+            <div style={{ backgroundColor: "#e0f0ff", padding: "0.5rem", fontWeight: "bold" }}>
+                <div className="scrolling-languages text-primary d-flex justify-content-center align-items-center">
+                    {["JAVA", "PYTHON", "PHP", "NODE JS"].map((lang, idx) =>
+                        [...Array(1)].map((_, i) => (
+                            <span key={`${lang}-${i}`} className="me-3">{lang} </span>
+                        ))
+                    )}
                 </div>
-
             </div>
 
-            <Container className="text-center py-5">
-                <h1 className="fw-bold">Jaisvik Pay built</h1>
-                <h2 className="text-success fw-bold">
-                    {"<for developers by developers>"}
+
+            <Container className="text-center py-5"
+            >
+                <h1 className="fw-bold text-primary">Jaisvik Pay Built</h1>
+                <h2 className="text-info fw-bold">
+                    {"<for developers by developers />"}
                 </h2>
 
                 <Row className="mt-5 text-start">
                     <Col md={4}>
-                        <h5>Integrations</h5>
-                        <p className="text-secondary">
-                            Find all popular platform SDKs, plugin, server integrations in our integration stack.
+                        <h5 className="text-light">Integrations</h5>
+                        <p className="text-light">
+                            Find all popular platform SDKs, plugins, and server integrations in our integration stack.
                         </p>
-                        <Button variant="link" className="text-info p-0">View Docs →</Button>
+                        <Button variant="link" className="text-light p-0">View Docs →</Button>
                     </Col>
                     <Col md={4}>
-                        <h5>API Reference</h5>
-                        <p className="text-secondary">
+                        <h5 className="text-light">API Reference</h5>
+                        <p className="text-light">
                             Comprehensive documentation to build powerful payment solutions.
                         </p>
-                        <Button variant="link" className="text-info p-0">View Docs →</Button>
+                        <Button variant="link" className="text-light  p-0">View Docs →</Button>
                     </Col>
                     <Col md={4}>
-                        <h5>Webhooks</h5>
-                        <p className="text-secondary">
+                        <h5 className="text-light">Webhooks</h5>
+                        <p className="text-light">
                             Receive real-time notifications for all payment-related transactions and events.
                         </p>
-                        <Button variant="link" className="text-info p-0">View Docs →</Button>
+                        <Button variant="link" className="text-light p-0">View Docs →</Button>
                     </Col>
                 </Row>
 
                 <Row className="mt-5">
                     <Col md={6} className="text-start">
-                        <h5>Try it out</h5>
-                        <h5>
+                        <h5 className="text-light">Try it out</h5>
+                        <h5 className="text-light">
                             for yourself <span className="ms-2">→</span>
                         </h5>
                     </Col>
 
                     <Col md={6}>
-                        <Card bg="dark" text="white">
-                            <Card.Header className="d-flex justify-content-between align-items-center">
+                        <Card bg="light" text="dark" border="primary">
+                            <Card.Header className="d-flex justify-content-between align-items-center bg-primary text-white">
                                 <span>{language}</span>
                                 <Dropdown onSelect={(e) => setLanguage(e)}>
-                                    <Dropdown.Toggle size="sm" variant="secondary">Change Language</Dropdown.Toggle>
+                                    <Dropdown.Toggle size="sm" variant="light" className="text-primary border-0">
+                                        Change Language
+                                    </Dropdown.Toggle>
                                     <Dropdown.Menu>
                                         {Object.keys(codeSnippets).map((lang) => (
                                             <Dropdown.Item key={lang} eventKey={lang}>{lang}</Dropdown.Item>

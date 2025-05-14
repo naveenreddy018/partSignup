@@ -1,14 +1,14 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
 import assets from '../../assets/assests';
-
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 const slides = [
   {
-    title: "Advanced Payment Solutions",
-    subtitle: "for India's boldest disruptors",
-    description: "100+ Payment Methods | Easy Integration | Powerful Dashboard",
+    title: "Seamless PayTech Solutions",
+    subtitle: "Powering India’s Payment Revolution",
+    description: "One Platform. 100+ Ways to Pay. Total Business Control",
     image: assets.jaisvikAccepts,
-    button1: "Sign Up Now",
+    button1: "Sign Up",
     button2: "Know More",
   },
   {
@@ -31,19 +31,36 @@ const slides = [
 
 const HeroCarousel = () => {
   const [current, setCurrent] = useState(0);
+  const [fade, setFade] = useState(true);
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
 
-
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 3000);
+      setFade(false);
+      setTimeout(() => {
+        setCurrent((prev) => (prev + 1) % slides.length);
+        setFade(true);
+      }, 1000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
-  const handlePrev = () => setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-  const handleNext = () => setCurrent((prev) => (prev + 1) % slides.length);
+  const handlePrev = () => {
+    setFade(false);
+    setTimeout(() => {
+      setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+      setFade(true);
+    }, 300);
+  };
+
+  const handleNext = () => {
+    setFade(false);
+    setTimeout(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+      setFade(true);
+    }, 300);
+  };
 
   const handleTouchStart = (e) => {
     touchStartX.current = e.changedTouches[0].screenX;
@@ -51,12 +68,8 @@ const HeroCarousel = () => {
 
   const handleTouchEnd = (e) => {
     touchEndX.current = e.changedTouches[0].screenX;
-    if (touchStartX.current - touchEndX.current > 75) {
-      handleNext();
-    }
-    if (touchEndX.current - touchStartX.current > 75) {
-      handlePrev();
-    }
+    if (touchStartX.current - touchEndX.current > 75) handleNext();
+    if (touchEndX.current - touchStartX.current > 75) handlePrev();
   };
 
   const slide = slides[current];
@@ -71,25 +84,26 @@ const HeroCarousel = () => {
     flexDirection: 'column',
     position: 'relative',
     overflow: 'hidden',
-      backgroundColor: "#e0f7ff",
-    // backgroundColor: '#f8f9fa',
+    backgroundColor: "#e0f7ff",
     borderRadius: '10px',
-    // boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
     padding: '40px 20px',
     zIndex: 100,
-    marginTop : window.innerWidth < 992 ? "180px" :  "150px"
-  
+    marginTop: window.innerWidth < 992 ? "180px" : "150px"
+  };
+
+  const fadeStyle = {
+    opacity: fade ? 1 : 0,
+    transition: 'opacity 0.5s ease-in-out',
   };
 
   const controlButtonStyle = {
     borderRadius: '50%',
     padding: '15px 20px',
-    // backgroundColor: 'rgba(255, 255, 255, 0.8)',
     border: 'none',
     color: '#333',
     fontSize: '24px',
     transition: 'background-color 0.3s ease',
-     backgroundColor: "#e0f7ff",
+    backgroundColor: "#e0f7ff",
   };
 
   return (
@@ -99,7 +113,7 @@ const HeroCarousel = () => {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <Container fluid>
+      <Container fluid style={fadeStyle}>
         <Row className="align-items-center p-5 justify-content-center">
           <Col md={6} className="text-center text-md-start mb-4 mb-md-0">
             <h1 className="text-primary fw-bold display-4">{slide.title}</h1>
@@ -111,7 +125,16 @@ const HeroCarousel = () => {
             </div>
           </Col>
           <Col md={6} className="text-center">
-            <Image src={slide.image} fluid style={{ maxHeight: '500px', objectFit: 'cover' }} />
+            <Image
+              src={slide.image}
+              fluid
+              style={{
+                maxHeight: '500px',
+                objectFit: 'cover',
+                transition: 'opacity 0.5s ease-in-out',
+                opacity: fade ? 1 : 0,
+              }}
+            />
           </Col>
         </Row>
       </Container>

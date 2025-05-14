@@ -10,44 +10,15 @@ const JasivikPayPage = () => {
   const featureItemsRef = useRef([]);
 
   useEffect(() => {
-    // Add keyframe animations to the document
+
     const style = document.createElement('style');
-    // style.innerHTML = `
-    //   @keyframes bounceUp {
-    //     0% {
-    //       opacity: 0;
-    //       transform: translateY(50px);
-    //     }
-    //     60% {
-    //       opacity: 1;
-    //       transform: translateY(-10px);
-    //     }
-    //     80% {
-    //       transform: translateY(5px);
-    //     }
-    //     100% {
-    //       transform: translateY(0);
-    //     }
-    //   }
 
-    //   .animate-on-scroll {
-    //     opacity: 0;
-    //   }
-
-    //   .animate-active {
-    //     animation: bounceUp 0.8s ease forwards;
-    //   }
-
-    //   .staggered-item {
-    //     opacity: 0;
-    //   }
-    // `;
     document.head.appendChild(style);
 
     const observerOptions = {
-      root: null, 
+      root: null,
       rootMargin: '0px',
-      threshold: 0.1 
+      threshold: 0.1
     };
 
     const handleIntersection = (entries, observer) => {
@@ -78,16 +49,16 @@ const JasivikPayPage = () => {
     if (netbankingRef.current) {
       observer.observe(netbankingRef.current);
     }
-    
+
     if (walletsRef.current) {
       observer.observe(walletsRef.current);
     }
-    
+
     if (blueSectionRef.current) {
       observer.observe(blueSectionRef.current);
     }
 
- 
+
     featureItemsRef.current.forEach(item => {
       if (item) observer.observe(item);
     });
@@ -101,7 +72,7 @@ const JasivikPayPage = () => {
 
   const styles = {
     mainContainer: {
-            width : window.innerWidth < 992 ? "100%" : "80%",
+      width: window.innerWidth < 992 ? "100%" : "80%",
       margin: '0 auto',
       padding: '20px',
       fontFamily: 'Arial, sans-serif',
@@ -243,7 +214,7 @@ const JasivikPayPage = () => {
     { name: 'PayPal', logo: assets.paypal },
   ];
 
- 
+
   const features = [
     { name: 'Payment Links', icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg> },
     { name: 'Payment Pages', icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"></path></svg> },
@@ -254,33 +225,33 @@ const JasivikPayPage = () => {
   return (
     <div style={styles.mainContainer}>
       {/* Netbanking Section */}
-      <div 
-        ref={netbankingRef} 
-        style={styles.section} 
+      <div
+        ref={netbankingRef}
+        style={styles.section}
         className="animate-on-scroll"
       >
         <h2 style={styles.sectionTitle}>Netbanking</h2>
-        <div 
-          className="row staggered-container" 
+        <div
+          className="row staggered-container"
           style={{ display: 'flex', flexWrap: 'wrap', margin: '0 -10px' }}
         >
           {banks.map((bank, index) => (
-            <div 
-              key={index} 
-              className="col-md-2 col-sm-4 col-6 staggered-item" 
+            <div
+              key={index}
+              className="col-md-2 col-sm-4 col-6 staggered-item"
               style={{ padding: '0 10px', marginBottom: '15px' }}
             >
-              <div 
+              <div
                 style={styles.optionBox}
-                // onMouseOver={(e) => handleMouseOver(e, styles.optionBoxHover)}
-                // onMouseOut={(e) => handleMouseOut(e, { transform: 'translateY(0)', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' })}
+              // onMouseOver={(e) => handleMouseOver(e, styles.optionBoxHover)}
+              // onMouseOut={(e) => handleMouseOut(e, { transform: 'translateY(0)', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' })}
               >
                 <img src={bank.logo} alt={bank.name} style={styles.optionImage} />
               </div>
             </div>
           ))}
-          <div 
-            className="col-md-2 col-sm-4 col-6 staggered-item" 
+          <div
+            className="col-md-2 col-sm-4 col-6 staggered-item"
             style={{ padding: '0 10px', marginBottom: '15px' }}
           >
             <div style={styles.moreOptions}>+ 67 Others &gt;</div>
@@ -289,33 +260,33 @@ const JasivikPayPage = () => {
       </div>
 
       {/* Wallets Section */}
-      <div 
-        ref={walletsRef} 
+      <div
+        ref={walletsRef}
         style={styles.section}
         className="animate-on-scroll"
       >
         <h2 style={styles.sectionTitle}>Wallets</h2>
-        <div 
-          className="row staggered-container" 
+        <div
+          className="row staggered-container"
           style={{ display: 'flex', flexWrap: 'wrap', margin: '0 -10px' }}
         >
           {wallets.map((wallet, index) => (
-            <div 
-              key={index} 
-              className="col-md-2 col-sm-4 col-6 staggered-item" 
+            <div
+              key={index}
+              className="col-md-2 col-sm-4 col-6 staggered-item"
               style={{ padding: '0 10px', marginBottom: '15px' }}
             >
-              <div 
+              <div
                 style={styles.optionBox}
-                // onMouseOver={(e) => handleMouseOver(e, styles.optionBoxHover)}
-                // onMouseOut={(e) => handleMouseOut(e, { transform: 'translateY(0)', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' })}
+              // onMouseOver={(e) => handleMouseOver(e, styles.optionBoxHover)}
+              // onMouseOut={(e) => handleMouseOut(e, { transform: 'translateY(0)', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' })}
               >
                 <img src={wallet.logo} alt={wallet.name} style={styles.optionImage} />
               </div>
             </div>
           ))}
-          <div 
-            className="col-md-2 col-sm-4 col-6 staggered-item" 
+          <div
+            className="col-md-2 col-sm-4 col-6 staggered-item"
             style={{ padding: '0 10px', marginBottom: '15px' }}
           >
             <div style={styles.moreOptions}>+ 4 Others &gt;</div>
@@ -324,8 +295,8 @@ const JasivikPayPage = () => {
       </div>
 
       {/* Blue section with features */}
-      <div 
-        ref={blueSectionRef} 
+      <div
+        ref={blueSectionRef}
         style={styles.blueSection}
         className="animate-on-scroll"
       >
@@ -336,22 +307,22 @@ const JasivikPayPage = () => {
 
         <div className="row" style={{ display: 'flex', flexWrap: 'wrap', marginBottom: '20px' }}>
           {features.map((feature, index) => (
-            <div 
-              key={index} 
-              className="col-md-6" 
+            <div
+              key={index}
+              className="col-md-6"
               style={{ marginBottom: '15px' }}
             >
-              <div 
+              <div
                 ref={el => featureItemsRef.current[index] = el}
                 className="animate-on-scroll"
                 style={styles.featureItem}
-                // onMouseOver={(e) => handleMouseOver(e, styles.featureItemHover)}
-                // onMouseOut={(e) => handleMouseOut(e, { backgroundColor: 'transparent' })}
+              // onMouseOver={(e) => handleMouseOver(e, styles.featureItemHover)}
+              // onMouseOut={(e) => handleMouseOut(e, { backgroundColor: 'transparent' })}
               >
-                <div 
+                <div
                   style={styles.featureIcon}
-                  // onMouseOver={(e) => handleMouseOver(e, styles.featureIconHover)}
-                  // onMouseOut={(e) => handleMouseOut(e, { transform: 'rotate(0deg)' })}
+                // onMouseOver={(e) => handleMouseOver(e, styles.featureIconHover)}
+                // onMouseOut={(e) => handleMouseOut(e, { transform: 'rotate(0deg)' })}
                 >
                   {feature.icon}
                 </div>

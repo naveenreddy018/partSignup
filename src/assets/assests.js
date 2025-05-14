@@ -1,7 +1,7 @@
-import jaisvikAccepts from "./jaisvik.png"
+import jaisvikAccepts from "./jaisvikPay.png"
 import netBanking from "./allbank.png"
-import upi_id from "./upi.jpg"
-import cardspayments from "./cardspayments.jpg"
+import upi_id from "./upi.png"
+import cardspayments from "./cardspayments.png"
 import unionIcon from "./union.jpeg"
 import AxisIcon from "./Axis.webp"
 import hdfcIcon from "./hdfc.png"
@@ -19,6 +19,17 @@ import payzappIcon from "./payzapp.png"
 import airtelmoney from "./airtelmoney.png"
 import humanIcon from "./human.jpeg"
 import cardSecurity from "./card-security.svg"
+import jaisvikPayLogo from "./JaisvikPayLogo.png"
+import customer_centric from "./customer_centric.png"
+import innovation from "./innovation.png"
+import integrity from "./integrity.png"
+import execellence from "./execellence.png"
+import collabration from "./collabration.png"
+import security from "./security.png"
+import aboutLogo from "./aboutlogo.jpg"
+import contact from "./contactSales.avif"
+import jaisvik from "./jaisvik_logo.png"
+
 
 
 const assets = {
@@ -43,7 +54,17 @@ const assets = {
     payzappIcon,
     airtelmoney,
     humanIcon,
-    cardSecurity
+    cardSecurity,
+    jaisvikPayLogo,
+    customer_centric,
+    innovation,
+    integrity,
+    execellence,
+    collabration,
+    security,
+    aboutLogo,
+    contact,
+    jaisvik
 }
 
 export default assets

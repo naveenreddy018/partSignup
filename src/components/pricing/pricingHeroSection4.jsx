@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CardPaymentAnimation from './cardAnimation/cardAnimaiton';
 
 // For the RazorpayX logo
 const RazorpayXLogo = () => (
@@ -24,14 +25,15 @@ const BankingHeroSection = () => {
 
   return (
     <div style={{
-      background: 'linear-gradient(180deg, #2D2684 0%, #231D69 100%)',
+      background: 'linear-gradient(180deg, rgba(45, 38, 132, 0.8) 0%, rgba(35, 29, 105, 1) 60%)',
+
       borderRadius: '0% 80% 0% 0% / 20%',
       padding: '0px 0 180px',
       position: 'relative',
       overflow: 'hidden',
       minHeight: '580px',
       width: "100% ",
-      marginTop: "100px",
+      marginTop: "30px",
 
     }}>
       {/* Background Elements */}
@@ -59,20 +61,20 @@ const BankingHeroSection = () => {
 
       <Container className="position-relative" style={{ zIndex: 2 }}>
         <Row className="align-items-center">
-          <Col lg={6} md={6} className="mb-4 mb-md-0">
+          <Col lg={6} md={6} className="mb-4 mb-md-5">
             <div className="mb-4">
               <RazorpayXLogo />
             </div>
 
-            <h1 className="fw-bold text-white mb-4" style={{ fontSize: '48px' }}>
-              Banking made awesome for business
+            <h1 className="fw-bold text-white mt-5 mb-4" style={{ fontSize: '48px' }}>
+              Revolutionizing Banking for Business Growth
             </h1>
 
             <p className="text-white fs-5 mb-5">
-              Banking that helps save time and money.
+              Banking Designed to Save You Time and Money
             </p>
 
-            <div className="p-4 rounded mb-5" style={{
+            {/* <div className="p-4 rounded mb-5" style={{
               backgroundColor: 'rgba(99, 102, 241, 0.8)',
               transition: 'all 0.3s ease',
               transform: 'translateZ(0)',
@@ -95,13 +97,14 @@ const BankingHeroSection = () => {
                   marginRight: '15px'
                 }}></div>
                 <p className="text-white fw-bold mb-0 fs-5">
-                  Collateral FREE Corporate Card with high limits.
+                Unlock High Limit Corporate Cards Without the Need for Collateral.
                 </p>
               </div>
-            </div>
+            </div> */}
+            <CardPaymentAnimation />
 
             <p className="text-white mb-3">
-              Get the best banking experience and Automate your banking now!
+              Experience Top-Tier Banking and Automate Your Financial Management Today!
             </p>
 
             <div className="d-flex flex-wrap mb-5">
@@ -156,7 +159,7 @@ const BankingHeroSection = () => {
                 justifyContent: 'center',
                 marginRight: '8px',
                 fontWeight: 'bold'
-              }}>X</span>
+              }}></span>
               Sign Up
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
                 <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />

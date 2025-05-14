@@ -11,13 +11,11 @@
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px; 
-  background-color: rgb(48, 94, 255); 
-  transition: width 0.3s ease; 
+  height: 2px;
+  background-color: rgb(48, 94, 255);
+  transition: width 0.3s ease;
 }
 
 .nav-link-hover:hover::after {
-  width: 100%; 
+  width: 100%;
 }
-
-

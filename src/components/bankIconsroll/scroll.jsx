@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import assets from '../../assets/assests';
-
 const bankLogos = [
   assets.upi_id,
   assets.sbiIcon,
