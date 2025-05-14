@@ -232,7 +232,7 @@ const Header = () => {
                 onMouseEnter={(e) => e.target.style.backgroundColor = 'rgb(34, 72, 153)'}
                 onMouseLeave={(e) => e.target.style.backgroundColor = 'rgb(48, 94, 255)'}
               >
-                Sign Up
+                <Nav.Link href="/signup" >Sign Up</Nav.Link>
               </Button>
             </div>
           </Navbar.Collapse>
